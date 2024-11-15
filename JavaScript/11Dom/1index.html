@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 0; i < 10000000000; i++) { }
+        console.log("end");
+    </script>
+    <h1>Hi There</h1>
+</body>
+
+</html>
+
+<!-- 
+DOCS : https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+
+Browser fetch the Html Page 
+Begins parsing the Html Page
+While Parsing it encounters the script tag refering to external file
+Browser requests the external file and blocks the parser ,hence parsing of Html is haulted
+Once the script is downloaded,it is executed subcequently and parser restarts 
+-->
