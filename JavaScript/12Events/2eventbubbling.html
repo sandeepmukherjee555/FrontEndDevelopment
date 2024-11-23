@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div" style="background-color: blue;padding: 20px;">
+        <button id="button">
+            click
+        </button>
+    </div>
+    <script>
+        let d = document.getElementById("div");
+        d.addEventListener("click", () => { console.log("clicked") });
+        let btn = document.getElementById("button");
+        btn.addEventListener("click", () => { console.log("clicked button") });
+    </script>
+</body>
+
+</html>
+
+<!-- 
+If we click on the button first the callback for clicked button will be 
+executed then callback goes to the parent this is called as event bubbling
+If same event is attached to the parent and the child first of all the event execute on the child 
+then it goes to the parent
+
+How to stop event bubbling we can use e.stoppropagation it does is it stops propagation going 
+from child to parent
+-->
